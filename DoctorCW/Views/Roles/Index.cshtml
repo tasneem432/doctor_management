@@ -1,0 +1,18 @@
+﻿@model IEnumerable< Microsoft.AspNetCore.Identity.IdentityRole>;
+<a asp-action="Create" asp-controller="Roles" title="add new Role">
+    <i class="fa fa-plus"></i>Add
+</a>
+<ul class="list-group">
+    @foreach (var item in Model)
+    {
+        <li class="list-group-item">
+            @item.Name
+            <a href="/roles/Edit/@item.Id" title="Edit">    Edit</a>||
+            <a href="/roles/Delete/@item.Id" title="Delete">
+                Delete
+            </a>
+        </li>
+
+    }
+
+</ul>
